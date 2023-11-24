@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            width: 100%;
+        }
+        /* common */
+        .section {      /* h2, p는 전체 배경 속에 있기 떄문에 가운데로 오지 않음*/
+            padding: 120px 0;
+            color: #0e0e0e;
+        }
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section > h2 {          /* > 표시는 바로 밑에 자식 h2, p만 */
+            font-size: 50px;
+            font-weight: 400;      /* h2랑 p 가운데 정렬하고 싶다. 하지만 section에 text-align:center를 */
+            line-height: 1;        /* 주면 자식 요소 전부 상속 받아서 가운데 배치되기 떄문에 문제가 된다. */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            width: 32%;
+            height: 400px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <section id="cardType" class="card__wrap section">
+        <h2>다양한 집 구경하기</h2>
+        <p>
+            다른 집들도 구경 하실래요?<br />
+            다양한 취향과 라이프 스타일을 함께 나누어요.
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">    <!--이미지 태그 이용할 때는 figure 태그 사용-->
+                    <img src="./img/simple.jpg" alt="미니멀 라이프">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">미니멀 라이프</h3>
+                    <p class="desc">심플하지만 필요한 건 갖춘 미니멀 라이프. 작지만 소소한 행복을 추구하는 라이프 구경하실래요?</p>
+                    <a class="btn" href="#">구경가기</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">    
+                    <img src="./img/modern.jpg" alt="모던 라이프">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">모던 라이프</h3>
+                    <p class="desc">고급스러움에 심플함을 더한 모던 라이프. 현대적인 감성이 물씬 느껴지는 라이프 구경하실래요?</p>
+                    <a class="btn" href="#">구경가기</a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">    
+                    <img src="./img/nature.jpg" alt="내추럴 라이프">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">내추럴 라이프</h3>
+                    <p class="desc">따뜻함이 묻어나는 자연스러운 내추럴 라이프. 꾸민 듯 꾸미지 않은 자연스러운 라이프 구경하실래요?</p>
+                    <a class="btn" href="#">구경가기</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

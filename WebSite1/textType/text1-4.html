@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: #0e0e0e;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section span {
+            display: block; /* span에서 text-align 안먹히는 이유는 영역 자체가 콘첸츠 크기라서*/
+            text-align: center; /* 때문에 display: block으로 바꿔줘야 이동된다.*/
+            font-size: 16px;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            
+        }
+        .section h2 {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* textType */
+        .text__inner {
+            display: flex;
+            flex-wrap: wrap; /* 넘치면 다음 줄로 */
+            justify-content: space-between;
+        }
+        .text {
+            width: 32%; /* 부모 박스의 32% 크기, 박스 너비 조절해서 박스 나열 */
+            background-color: #f5f5f5;
+            margin-bottom: 2%; /* 간격 띄우기 */
+            padding: 20px 20px 32px 20px;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .text:hover {
+            background-color: rgb(217, 217, 217, 0.5);
+        }
+        .text__title {
+            font-size: 24px;
+            line-height: 1;
+            color: #0e0e0e;
+            margin: 10px;
+            white-space: nowrap;   /* 두줄이 되는 것을 한줄로 바꿔주는 효과*/
+            overflow: hidden;   /* 넘치면 숨김 */
+            text-overflow: ellipsis; /* 넘치면 ... 으로*/
+            padding-top: 75px;
+            position: relative;
+        }
+        .text__title::before {
+            content: '';
+            position: absolute; /*상위 박스 기준*/
+            left: 0; /* 위치 지정 */
+            top: 0;
+            width: 60px;
+            height: 60px; /* 크기 지정*/
+            background: url(img/text_icon.svg);
+        }
+        .text.t1 .text__title::before {
+            background-position: 0 0;
+        }
+        .text.t2 .text__title::before {
+            background-position: -60px 0;
+        }
+        .text.t3 .text__title::before {
+            background-position: -120px 0;
+        }
+        .text.t4 .text__title::before {
+            background-position: -180px 0;
+        }
+        .text.t5 .text__title::before {
+            background-position: -240px 0;
+        }
+        .text.t6 .text__title::before {
+            background-position: -360px 0;
+        }
+        .text__desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.4;
+            margin: 10px;
+            overflow: hidden;   /* 넘치면 숨김 */
+            text-overflow: ellipsis;    /* 넘치면 ... 으로*/
+            display: -webkit-box;   /* webkit은 베타 버전, 아직 시험중 */
+            -webkit-line-clamp: 3;  /* 3줄로 */
+            -webkit-box-orient: vertical; /* 수직 */
+        }
+        .text__btn {
+            font-size: 16px;
+            line-height: 1;
+            border-bottom: 2px solid #0e0e0e;
+            margin-left: 10px;
+            }
+    </style>
+</head>
+<body>
+    <section id="textType" class="text__wrap section">
+        <span>집들이</span>  <!--공통 스타일링이 아니라서 span 사용-->
+        <h2>카테고리별 집들이</h2>
+        <div class="text__inner container">
+            <div class="text t1">
+                <h3 class="text__title">홈데코</h3>
+                <p class="text__desc">
+                    무엇으로 집을 꾸몄는지에 따라 분위기는 달라집니다. 
+                    연출에 따라서 밋밋했던 공간이 멋지게 변신! 
+                    다양한 사람들의 집에 방문하여 어떻게 활용하여 꾸몄는지 살펴볼까요?
+                </p>
+                <a class="text__btn" href="#">보러가기</a>
+            </div>
+            <div class="text t2">
+                <h3 class="text__title">조명</h3>
+                <p class="text__desc">
+                    조명에 따라 달라지는 집의 분위기.
+                    거실과 방 그리고 화장실까지! 조명이 주는 효과는 굉장히 큽니다. 
+                    어떤 조명을 활용했는지 살펴볼까요?
+                </p>
+                <a class="text__btn" href="#">보러가기</a>
+            </div>
+            <div class="text t3">
+                <h3 class="text__title">식물</h3>
+                <p class="text__desc">
+                    식물 하나 뒀을 뿐인데 생기가 도는 우리 집!
+                    반려 식물이라는 말도 생겼습니다. 
+                    어떤 식물을 어떻게 관리하는지 살펴볼까요?
+                </p>
+                <a class="text__btn t4" href="#">보러가기</a>
+            </div>
+            <div class="text t4">
+                <h3 class="text__title">수납/정리</h3>
+                <p class="text__desc">
+                    집을 꾸미는 거만큼 수납공간도 굉장히 중요합니다. 
+                    공간을 어떤 식으로 활용해서 수납과 정리를 하는지 살펴볼까요?
+                </p>
+                <a class="text__btn" href="#">보러가기</a>
+            </div>    
+            <div class="text t5">
+                <h3 class="text__title">침구</h3>
+                <p class="text__desc">
+                    의식주만큼 중요한 건 수면! 
+                    그리고 수면 환경에도 영향을 주는 침구!
+                    어떤 침구를 사용하는지 살펴볼까요?
+                </p>
+                <a class="text__btn" href="#">보러가기</a>
+            </div>
+            
+            <div class="text t6">
+                <h3 class="text__title">가구</h3>
+                <p class="text__desc">
+                    어떤 가구를 어떻게 배치했냐에 따라서 집의 분위기는 달라집니다.
+                    공간을 크게 차지하는 만큼 신중하게 고르게 되는 가구!
+                    다양한 가구의 디자인과 배치를 살펴볼까요?
+                </p>
+                <a class="text__btn" href="#">보러가기</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

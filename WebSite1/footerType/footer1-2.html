@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸터 영역</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        .blind {             /* 접근성을 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;         /* 영영 차지하지 않게 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        
+        /* common */ /* 재활용 */
+        .container {    /* 가운데 영역으로 */
+            width: 1160px;
+            padding: 0 20px;    
+            margin: 0 auto;      /* 가운데로 밀어줌 */
+        }
+        .section {              
+            padding: 120px 0; /* 패딩으로 푸터 영역 넓혀줌 */
+        }
+
+        /* footerType */
+        .footer__wrap {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <footer id="footerType" class="footer__wrap section">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="#">웹표준 사이트</a></li>
+                        <li><a href="#">반응 사이트</a></li>
+                        <li><a href="#">퍼랠렉스 사이트</a></li>
+                        <li><a href="#">포트폴리 사이트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>헤어 영역</h3>
+                    <ul>
+                        <li><a href="#">헤더 유형1</a></li>
+                        <li><a href="#">헤더 유형2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>슬라이드 영역</h3>
+                    <ul>
+                        <li><a href="#">슬라이드 유형1</a></li>
+                        <li><a href="#">슬라이드 유형2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>이미지 영역</h3>
+                    <ul>
+                        <li><a href="#">이미지 유형1</a></li>
+                        <li><a href="#">이미지 유형2</a></li>
+                        <li><a href="#">이미지/텍스트 유형1</a></li>
+                        <li><a href="#">텍스트 유형1</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>카드 영역</h3>
+                    <ul>
+                        <li><a href="#">카드 유형1</a></li>
+                        <li><a href="#">카드 유형2</a></li>
+                        <li><a href="#">카드 유형3</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>푸터 영역</h3>
+                    <ul>
+                        <li><a href="#">푸터 메뉴 유형1</a></li>
+                        <li><a href="#">푸터 컨텍트 유형1</a></li>
+                        <li><a href="#">푸터 이메일 유형1</a></li>
+                    </ul>
+            </div>
+            <div class="forter__right">
+                JIEUN LEE © 2023 All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

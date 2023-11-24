@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        .blind {    /* 접근을 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;   /* 영영 차지하지 않게 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        /* sliderType */
+        .slider__wrap {
+            background-color: ccc;
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section id="sliderType" class="slider__wrap">
+        <h2 class="blind">슬라이더 유형</h2> <!--접근성을 위해 h2 태그 작성/ -->
+        <div class="slider__inner">
+            <div class="slider__img"></div>
+            <div class="slider__arrow"></div>
+            <div class="slider__dot"></div>
+        </div>
+    </section>
+</body>
+</html>

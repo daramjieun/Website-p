@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸터 영역</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        li {
+            list-style: none;
+        }
+        h1, h2, h3, h4, h6 {
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .blind {             /* 접근성을 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;         /* 영영 차지하지 않게 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        
+        /* common */ /* 재활용 */
+        .container {    /* 가운데 영역으로 */
+            width: 1160px;
+            padding: 0 20px;    
+            margin: 0 auto;      /* 가운데로 밀어줌 */
+        }
+        .section {              
+            padding: 120px 0; /* 패딩으로 푸터 영역 넓혀줌 */
+        }
+
+        /* footerType */
+        .footer__menu {
+            display: flex;
+            margin-bottom: 70px;
+        }
+        .footer__menu > div {  /* 푸터 메뉴 밑에 6개 박스 */
+            width: 16%;
+        }
+        .footer__menu h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .footer__menu li a {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px; /* a 태그 인라인 구조기 때문에 안 먹힘 */
+            display: block; /* 그렇기 때문에 block화 시켜줘야 한다.*/
+        }
+        .forter__right {
+            border-top: 1px solid #d9d9d9;
+            padding-top: 40px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <footer id="footerType" class="footer__wrap section">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>홈데코</h3>
+                    <ul>
+                        <li><a href="#">인테리어소품</a></li>
+                        <li><a href="#">장식</a></li>
+                        <li><a href="#">식물</a></li>
+                        <li><a href="#">파티용품</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>패브릭</h3>
+                    <ul>
+                        <li><a href="#">침구세트</a></li>
+                        <li><a href="#">커튼</a></li>
+                        <li><a href="#">러그</a></li>
+                        <li><a href="#">매트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>수납/정리</h3>
+                    <ul>
+                        <li><a href="#">서랍장</a></li>
+                        <li><a href="#">리빙박스</a></li>
+                        <li><a href="#">행거</a></li>
+                        <li><a href="#">수납정리</a></li>
+                        <li><a href="#">선반</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>조명</h3>
+                    <ul>
+                        <li><a href="#">천장등</a></li>
+                        <li><a href="#">스탠드</a></li>
+                        <li><a href="#">무드등</a></li>
+                        <li><a href="#">벽조명</a></li>
+                    </ul>
+                </div>
+                <di>
+                    <h3>가구</h3>
+                    <ul>
+                        <li><a href="#">침대</a></li>
+                        <li><a href="#">테이블/책상/식탁</a></li>
+                        <li><a href="#">의자</a></li>
+                        <li><a href="#">소파</a></li>
+                        <li><a href="#">진열장</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>셀프 인테리어</h3>
+                    <ul>
+                        <li><a href="#">페인트</a></li>
+                        <li><a href="#">벽지/ 장판</a></li>
+                        <li><a href="#">인테리어 도구</a></li>
+                    </ul>
+                </div>
+            <div class="forter__right">
+                JIEUN LEE © 2023 All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header1</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 뷰포트 가로 스크롤바 방지*/
+            font-family: 'Lato', sans-serif;
+            font-weight: 400px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        em {
+            font-style: normal;
+        }
+        li {
+            list-style: none;
+        }
+        /* headerType */
+        /* 헤더 기본 작업 */
+        .header__inner {
+            height: 70px;
+            width: 100%;     /* 기본 값 100%이지만 작성 */
+            display: flex;  /* 수평 정렬 */
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border: 1px solid #ccc; /* 임시로 */
+        }
+        /* 헤더 로고 */
+        .header__logo {
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase; /* 대문자로 */
+        }
+        .header__logo em {    /* a 태그 작성 생략 가능 */
+            font-size: 18px;
+            font-weight: 400;
+        }
+        /* 헤더 메뉴 */
+        .header__menu ul{
+            display: flex;
+        }
+        .header__menu li a {
+            padding: 10px 30px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .header__menu li a:hover {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .header__member {}
+    </style>
+</head>
+<body>
+    <header id="header" class="header__wrap">
+        <div class="header__inner">
+            <div class="header__logo">
+                <div><a href="#">HOME <em>with</em></a></div>
+            </div>
+            <nav class="header__menu"> <!--메뉴는 nav 태그 사용-->
+                <ul>
+                    <li><a href="#">헤더 영역</a></li>
+                    <li><a href="#">슬라이더 영역</a></li>
+                    <li><a href="#">배너 영역</a></li>
+                    <li><a href="#"> 컨텐츠 영역</a></li>
+                    <li><a href="#">푸터 영역</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">header__member</div>
+        </div>       
+    </header>
+</body>
+</html>

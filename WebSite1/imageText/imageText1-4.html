@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지/텍스트 유형</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        .blind {        /* 접근성 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;   /* 영역 차지하지 않게 크기 조정 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        li {
+            list-style: none;
+        }
+
+        /* common */
+        .container {        /* 영역과 위치와 잡기 */
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {          /* 여백 주기*/
+            padding: 120px 0;
+        }
+
+        /* imTextType */
+        /* .imgText__wrap {    //영역 보기 위해 임시로 준 것
+            width: 100%;
+            height: 500px;
+            background-color: #ccc; 
+        } */
+        .imgText__inner {   /* flex로 아이템 박스 정렬 */
+            display: flex;
+            justify-content: space-between;
+        }
+        .imgText__inner > div { /* 바로 하위 자식 태그를 가리킬 때 > 사용 */
+            width: 32%;
+            height: 500px;
+        }
+
+        /* text */
+        .imgText__txt .small {
+            font-size: 16px;
+            color: #666;
+            text-decoration: underline;
+            margin-bottom: 20px; /* 인라인 구조라서 안 먹힘*/
+            display: block; /* block 또는 inline-block으로 설정하기 */
+        }
+        .imgText__txt .title {
+            font-size: 50px;
+            font-weight: 300;
+            word-break: keep-all; /* 단어 끊어준다. */
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        .imgText__txt .desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .imgText__txt .list { /* 여기서 text color, text-weight 바꾸려고 하면 안 바뀐다.*/
+            font-size: 18px;  /* 왜냐하면 a 태그 때문에*/
+            line-height: 1.6; 
+        }
+
+        .imgText__txt .list li {
+            position: relative;
+            padding-left: 20px;
+        }
+        .imgText__txt .list li::before { /* 가상 요소 */
+            content: '';      /* li 앞에 콘텐츠 넣어줌 */
+            width: 5px;
+            height: 5px;
+            background: #666;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            top: 9px;
+        }
+        .imgText__txt .list li a {
+            font-weight: 300;
+            color: #666;
+        }
+        
+        /* img */
+        .imgText__img {
+            border-radius: 10px;
+        }
+        .imgText__img.img1 {    /*  이름 붙여써야 한다.*/
+            background: url(./img/imagetext1.jpg) no-repeat center / cover;
+        }
+        .imgText__img.img2 {
+            background: url(./img/imagetext2.jpg) no-repeat center / cover;
+        }
+    </style>
+</head>
+<body>
+    <section id="imgTextType" class="imgText__wrap section">
+        <h2 class="blind">이미지 텍스트 유형</h2> <!--접근성 -->
+        <div class="imgText__inner container">
+            <div class="imgText__txt">
+                <span class="small">집 꾸미기</span> <!--이름 충돌이 일어날 수 있기 때문에 class 붙여준다.-->
+                <h3 class="title">집 꾸미기 소품 구경하기</h3>  <!--복잡한 사이트 아니기 때문에 class명은 짧게--> 
+                <p class="desc">
+                    분위기만 바꿨을 뿐인데!<br />
+                    소품과 셀프 인테리어로 다른 집 만들기
+                </p>
+                <ul class="list">
+                    <li><a href="#">거실 소품</a></li>
+                    <li><a href="#">방 소품</a></li>
+                    <li><a href="#">부엌 소품</a></li>
+                    <li><a href="#">베란다 소품</a></li>
+                    <li><a href="#">다양한 가구</a></li>
+                    <li><a href="#">셀프 인테리어 도구</a></li>
+                </ul>
+            </div>
+            <div class="imgText__img img1">
+                <a href="#">집 꾸미기</a>
+            </div>
+            <div class="imgText__img img2">
+                <a href="#">셀프 인테리어</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

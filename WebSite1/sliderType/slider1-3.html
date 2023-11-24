@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #0e0e0e;
+        }
+        .blind {        /* 접근을 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;   /* 영영 차지하지 않게 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        /* sliderType */
+        /*.slider__wrap {
+            background-color: ccc; 영역 확인하기 위해 임의로 작성하고 이미지 채우면 지움
+        } */
+        .slider__img {
+            /* background-image: url(img/home.jpg);
+            background-repeat: no-repeat;        // 반복하지 않는다.
+            background-position: center center  // x축과 y축 가운데
+            background-size: cover;             //이미지 채움
+            */
+            background: url(img/home.jpg) no-repeat center center / cover; /* 한번에 작성 */
+            width: 100%;
+            height: 580px;
+        }
+        .slider__img__desc {
+            width: 1160px; /*너비*/
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+        .slider__img__desc span {
+            font-size: 16px;
+            background-color: #f1f1f1;
+            padding: 0 10px 1px 10px;
+            border-radius: 50px;
+            text-transform: uppercase; /*대문자*/
+            margin-bottom: 10px;    /* span은 inline이기 때문에 margin이 먹히지 않는다.*/
+            display: inline-block; /* 그렇기 때문에 inline-block으로 바꿔준다.*/
+        }
+        .slider__img__desc h3 {
+            font-size: 50px;
+            font-weight: 600;
+            line-height: 1;
+            color: #f1f1f1;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .slider__img__desc p {
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #f1f1f1;
+            margin-bottom: 130px;
+        }
+        .slider__img__btn a {
+            font-size: 16px; /* 모든 브라우저의 폰트 사이즈 16px이기 때문에 안넣어줘도 된다.*/
+            background-color: #f1f1f1;
+            padding: 10px 50px;
+            border-radius: 50px;
+            transition: all 0.4s;
+        }
+        .slider__img__btn .black {
+            background-color: #0e0e0e;
+            color: #f1f1f1;
+            margin-left: 4px;
+        }
+        .slider__img__btn a:hover {
+            background-color: rgba(242, 242, 242, 0.8);
+        }
+        .slider__img__btn .black:hover {
+            background-color: rgb(13, 13, 13, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <section id="sliderType" class="slider__wrap">
+        <h2 class="blind">슬라이더 유형</h2> <!--접근성을 위해 h2 태그 작성/ -->
+        <div class="slider__inner">
+            <div class="slider">
+                <div class="slider__img">
+                    <div class="slider__img__desc">
+                        <span>LIFE STYLE</span>
+                        <h3>ALL ABOUT HOME OF LIFE</h3>
+                        <p>
+                            아침과 낮 그리고 밤 또다시 아침<br />
+                            가장 편한 공간과 일상
+                        </p>
+                        <div class="slider__img__btn">
+                            <a href="#">자세히 보기</a>
+                            <a class="black" href="#">사이트 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__arrow"></div>
+                <div class="slider__dot"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

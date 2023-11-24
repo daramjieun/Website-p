@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section > h2 {        /* 바로 밑에 자식만 해당할 수 있게 */
+            font-size: 50px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300px;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+
+        /* imageType */
+        #imageType {
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image {
+            width: 49%;
+            height: 370px;
+        }
+        .image.img1 {
+            background: url(./img/home1.jpg) no-repeat center / cover;
+        }
+        .image.img2 {
+            background: url(./img/home2.jpg) no-repeat center / cover;
+        }
+        .image__title {}
+        .image__desc {}
+        .image__btn {}
+    </style>
+</head>
+<body>
+    <section id="imageType" class="image__wrap section">
+        <h2>HOME STYLE</h2>
+        <p>다양한 라이프 스타일을 구경하실래요?</p>
+        <div class="image__inner container">
+            <article class="image img1">
+                <h3 class="image__title">따뜻한 침구</h3>
+                <p class="image__desc">포근하게 잠들고 개운하게 꺠어나는 일상을 위한 다양한 방 구경하실래요?</p>
+                <a class="image__btn" href="#">구경가기</a>
+            </article>
+            <article class="image img2">
+                <h3 image__title>거실 가구</h3>
+                <p class="image__desc">포근하게 잠들고 개운하게 꺠어나는 일상을 위한 다양한 방 구경하실래요?</p>
+                <a class="image__btn href="#">구경가기</a>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        .blind {        /* 접근을 위해 작성: 리더기가 읽어주지만 사용자 눈에는 보이지 않게 설정 */
+            width: 0;   /* 영영 차지하지 않게 */
+            height: 0;
+            line-height: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        /* sliderType */
+        /*.slider__wrap {
+            background-color: ccc; 영역 확인하기 위해 임의로 작성하고 이미지 채우면 지움
+        } */
+        .slider__img {
+            /* background-image: url(img/home.jpg);
+            background-repeat: no-repeat;        // 반복하지 않는다.
+            background-position: center center  // x축과 y축 가운데
+            background-size: cover;             //이미지 채움
+            */
+            background: url(img/home.jpg) no-repeat center center / cover; /* 한번에 작성 */
+            width: 100%;
+            height: 580px;
+        }
+        /* .slider__arrow {}
+        .slider__dot {} */
+    </style>
+</head>
+<body>
+    <section id="sliderType" class="slider__wrap">
+        <h2 class="blind">슬라이더 유형</h2> <!--접근성을 위해 h2 태그 작성/ -->
+            <div class="slider__inner">
+                <div class="slider">
+                <div class="slider__img"></div>
+                <div class="slider__arrow"></div>
+                <div class="slider__dot"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
